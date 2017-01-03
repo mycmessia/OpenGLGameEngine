@@ -15,6 +15,7 @@
 
 #include <glm/glm.hpp>
 #include <glm/gtc/type_ptr.hpp>
+#include <glm/gtc/matrix_transform.hpp>
 
 class Window
 {
@@ -34,6 +35,12 @@ public:
     
     static void KeyCallback (GLFWwindow* window, int key, int scancode, int action, int mode);
     
+    int GetScreenWidth () { return screenWidth; }
+    int GetScreenHeight () { return screenHeight; }
+    
+    void CalcDeltaTime ();
+    float GetDeltaTime ();
+    
 private:
     GLFWwindow* glWindow;
     
@@ -41,6 +48,9 @@ private:
     int screenHeight;
     int framebufferWidth;
     int framebufferHeight;
+    
+    float deltaTime;
+    float lastTime;
 };
 
 #endif /* Window_hpp */

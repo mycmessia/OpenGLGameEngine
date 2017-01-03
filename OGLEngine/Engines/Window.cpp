@@ -79,3 +79,15 @@ void Window::KeyCallback (GLFWwindow* window, int key, int scancode, int action,
         }
     }
 }
+
+void Window::CalcDeltaTime ()
+{
+    GLfloat currentFrame = glfwGetTime();
+    deltaTime = currentFrame - lastTime;
+    lastTime = currentFrame;
+}
+
+float Window::GetDeltaTime ()
+{
+    return deltaTime;
+}

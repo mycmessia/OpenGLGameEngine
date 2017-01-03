@@ -106,11 +106,13 @@ void Shader::SetVector4f (const GLchar *name, const glm::vec4 &value, GLboolean 
     glUniform4f (glGetUniformLocation (this->ID, name), value.x, value.y, value.z, value.w);
 }
 
-void Shader::SetMatrix4 (const GLchar *name, const glm::mat4 &matrix, GLboolean useShader)
+Shader& Shader::SetMatrix4 (const GLchar *name, const glm::mat4 &matrix, GLboolean useShader)
 {
     if (useShader)
         this->Use ();
     glUniformMatrix4fv (glGetUniformLocation (this->ID, name), 1, GL_FALSE, glm::value_ptr(matrix));
+    
+    return *this;
 }
 
 

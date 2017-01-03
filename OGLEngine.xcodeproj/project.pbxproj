@@ -21,6 +21,7 @@
 		0937024A1E1C135300811739 /* Texture2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 093702401E1C135300811739 /* Texture2D.cpp */; };
 		0937024B1E1C135300811739 /* Window.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 093702421E1C135300811739 /* Window.cpp */; };
 		097FAADE1E1C37740026FB60 /* Input.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 097FAADC1E1C37740026FB60 /* Input.cpp */; };
+		097FAAE11E1C46B00026FB60 /* Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 097FAADF1E1C46B00026FB60 /* Camera.cpp */; };
 		09FDCD5B1E1C10AA00E3404A /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 09FDCD5A1E1C10AA00E3404A /* main.cpp */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +64,8 @@
 		097FAAD11E1C17A80026FB60 /* lowpolymountains.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = lowpolymountains.obj; path = Models/lowpolymountains.obj; sourceTree = "<group>"; };
 		097FAADC1E1C37740026FB60 /* Input.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Input.cpp; path = Engines/Input.cpp; sourceTree = "<group>"; };
 		097FAADD1E1C37740026FB60 /* Input.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Input.hpp; path = Engines/Input.hpp; sourceTree = "<group>"; };
+		097FAADF1E1C46B00026FB60 /* Camera.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Camera.cpp; path = Engines/Camera.cpp; sourceTree = "<group>"; };
+		097FAAE01E1C46B00026FB60 /* Camera.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Camera.hpp; path = Engines/Camera.hpp; sourceTree = "<group>"; };
 		09FDCD571E1C10AA00E3404A /* OGLEngine */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = OGLEngine; sourceTree = BUILT_PRODUCTS_DIR; };
 		09FDCD5A1E1C10AA00E3404A /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -104,6 +107,8 @@
 				093702431E1C135300811739 /* Window.hpp */,
 				097FAADC1E1C37740026FB60 /* Input.cpp */,
 				097FAADD1E1C37740026FB60 /* Input.hpp */,
+				097FAADF1E1C46B00026FB60 /* Camera.cpp */,
+				097FAAE01E1C46B00026FB60 /* Camera.hpp */,
 			);
 			name = Engines;
 			sourceTree = "<group>";
@@ -225,6 +230,7 @@
 				093702451E1C135300811739 /* Mesh.cpp in Sources */,
 				093702471E1C135300811739 /* RawModel.cpp in Sources */,
 				093702441E1C135300811739 /* Loader.cpp in Sources */,
+				097FAAE11E1C46B00026FB60 /* Camera.cpp in Sources */,
 				097FAADE1E1C37740026FB60 /* Input.cpp in Sources */,
 				0937024B1E1C135300811739 /* Window.cpp in Sources */,
 				093702491E1C135300811739 /* Shader.cpp in Sources */,

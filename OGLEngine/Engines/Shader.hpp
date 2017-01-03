@@ -45,7 +45,7 @@ public:
     void SetVector3f (const GLchar* name, const glm::vec3 &value, GLboolean useShader = false);
     void SetVector4f (const GLchar* name, GLfloat x, GLfloat y, GLfloat z, GLfloat w, GLboolean useShader = false);
     void SetVector4f (const GLchar* name, const glm::vec4 &value, GLboolean useShader = false);
-    void SetMatrix4 (const GLchar* name, const glm::mat4 &matrix, GLboolean useShader = false);
+    Shader& SetMatrix4 (const GLchar* name, const glm::mat4 &matrix, GLboolean useShader = false);
     
 private:
     // Checks if compilation or linking failed and if so, print the error logs
