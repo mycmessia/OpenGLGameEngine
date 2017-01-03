@@ -1,0 +1,383 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		093702071E1C116200811739 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 093702061E1C116200811739 /* OpenGL.framework */; };
+		093702091E1C116D00811739 /* libGLEW.2.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 093702081E1C116D00811739 /* libGLEW.2.0.0.dylib */; };
+		0937020B1E1C117600811739 /* libglfw3.3.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0937020A1E1C117600811739 /* libglfw3.3.2.dylib */; };
+		0937020D1E1C118500811739 /* libassimp.3.3.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0937020C1E1C118500811739 /* libassimp.3.3.1.dylib */; };
+		093702111E1C119E00811739 /* libSOIL.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 093702101E1C119E00811739 /* libSOIL.dylib */; };
+		093702441E1C135300811739 /* Loader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 093702341E1C135300811739 /* Loader.cpp */; };
+		093702451E1C135300811739 /* Mesh.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 093702361E1C135300811739 /* Mesh.cpp */; };
+		093702461E1C135300811739 /* Model.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 093702381E1C135300811739 /* Model.cpp */; };
+		093702471E1C135300811739 /* RawModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0937023A1E1C135300811739 /* RawModel.cpp */; };
+		093702481E1C135300811739 /* Renderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0937023C1E1C135300811739 /* Renderer.cpp */; };
+		093702491E1C135300811739 /* Shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0937023E1E1C135300811739 /* Shader.cpp */; };
+		0937024A1E1C135300811739 /* Texture2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 093702401E1C135300811739 /* Texture2D.cpp */; };
+		0937024B1E1C135300811739 /* Window.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 093702421E1C135300811739 /* Window.cpp */; };
+		097FAADE1E1C37740026FB60 /* Input.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 097FAADC1E1C37740026FB60 /* Input.cpp */; };
+		09FDCD5B1E1C10AA00E3404A /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 09FDCD5A1E1C10AA00E3404A /* main.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		09FDCD551E1C10AA00E3404A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		093702061E1C116200811739 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		093702081E1C116D00811739 /* libGLEW.2.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libGLEW.2.0.0.dylib; path = /usr/local/Cellar/glew/2.0.0/lib/libGLEW.2.0.0.dylib; sourceTree = "<absolute>"; };
+		0937020A1E1C117600811739 /* libglfw3.3.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw3.3.2.dylib; path = /usr/local/Cellar/glfw3/3.2.1/lib/libglfw3.3.2.dylib; sourceTree = "<absolute>"; };
+		0937020C1E1C118500811739 /* libassimp.3.3.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libassimp.3.3.1.dylib; path = /usr/local/Cellar/assimp/3.3.1/lib/libassimp.3.3.1.dylib; sourceTree = "<absolute>"; };
+		093702101E1C119E00811739 /* libSOIL.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libSOIL.dylib; path = /opt/local/lib/libSOIL.dylib; sourceTree = "<absolute>"; };
+		093702341E1C135300811739 /* Loader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Loader.cpp; path = Engines/Loader.cpp; sourceTree = "<group>"; };
+		093702351E1C135300811739 /* Loader.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Loader.hpp; path = Engines/Loader.hpp; sourceTree = "<group>"; };
+		093702361E1C135300811739 /* Mesh.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Mesh.cpp; path = Engines/Mesh.cpp; sourceTree = "<group>"; };
+		093702371E1C135300811739 /* Mesh.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Mesh.hpp; path = Engines/Mesh.hpp; sourceTree = "<group>"; };
+		093702381E1C135300811739 /* Model.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Model.cpp; path = Engines/Model.cpp; sourceTree = "<group>"; };
+		093702391E1C135300811739 /* Model.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Model.hpp; path = Engines/Model.hpp; sourceTree = "<group>"; };
+		0937023A1E1C135300811739 /* RawModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = RawModel.cpp; path = Engines/RawModel.cpp; sourceTree = "<group>"; };
+		0937023B1E1C135300811739 /* RawModel.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = RawModel.hpp; path = Engines/RawModel.hpp; sourceTree = "<group>"; };
+		0937023C1E1C135300811739 /* Renderer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Renderer.cpp; path = Engines/Renderer.cpp; sourceTree = "<group>"; };
+		0937023D1E1C135300811739 /* Renderer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Renderer.hpp; path = Engines/Renderer.hpp; sourceTree = "<group>"; };
+		0937023E1E1C135300811739 /* Shader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Shader.cpp; path = Engines/Shader.cpp; sourceTree = "<group>"; };
+		0937023F1E1C135300811739 /* Shader.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Shader.hpp; path = Engines/Shader.hpp; sourceTree = "<group>"; };
+		093702401E1C135300811739 /* Texture2D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Texture2D.cpp; path = Engines/Texture2D.cpp; sourceTree = "<group>"; };
+		093702411E1C135300811739 /* Texture2D.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Texture2D.hpp; path = Engines/Texture2D.hpp; sourceTree = "<group>"; };
+		093702421E1C135300811739 /* Window.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Window.cpp; path = Engines/Window.cpp; sourceTree = "<group>"; };
+		093702431E1C135300811739 /* Window.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Window.hpp; path = Engines/Window.hpp; sourceTree = "<group>"; };
+		0937024E1E1C139500811739 /* basic.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = basic.frag; path = Shaders/basic.frag; sourceTree = "<group>"; };
+		0937024F1E1C139500811739 /* basic.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = basic.vs; path = Shaders/basic.vs; sourceTree = "<group>"; };
+		097FAAD11E1C17A80026FB60 /* lowpolymountains.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = lowpolymountains.obj; path = Models/lowpolymountains.obj; sourceTree = "<group>"; };
+		097FAADC1E1C37740026FB60 /* Input.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Input.cpp; path = Engines/Input.cpp; sourceTree = "<group>"; };
+		097FAADD1E1C37740026FB60 /* Input.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Input.hpp; path = Engines/Input.hpp; sourceTree = "<group>"; };
+		09FDCD571E1C10AA00E3404A /* OGLEngine */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = OGLEngine; sourceTree = BUILT_PRODUCTS_DIR; };
+		09FDCD5A1E1C10AA00E3404A /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		09FDCD541E1C10AA00E3404A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				093702111E1C119E00811739 /* libSOIL.dylib in Frameworks */,
+				0937020D1E1C118500811739 /* libassimp.3.3.1.dylib in Frameworks */,
+				0937020B1E1C117600811739 /* libglfw3.3.2.dylib in Frameworks */,
+				093702091E1C116D00811739 /* libGLEW.2.0.0.dylib in Frameworks */,
+				093702071E1C116200811739 /* OpenGL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0937024C1E1C135E00811739 /* Engines */ = {
+			isa = PBXGroup;
+			children = (
+				093702341E1C135300811739 /* Loader.cpp */,
+				093702351E1C135300811739 /* Loader.hpp */,
+				093702361E1C135300811739 /* Mesh.cpp */,
+				093702371E1C135300811739 /* Mesh.hpp */,
+				093702381E1C135300811739 /* Model.cpp */,
+				093702391E1C135300811739 /* Model.hpp */,
+				0937023A1E1C135300811739 /* RawModel.cpp */,
+				0937023B1E1C135300811739 /* RawModel.hpp */,
+				0937023C1E1C135300811739 /* Renderer.cpp */,
+				0937023D1E1C135300811739 /* Renderer.hpp */,
+				0937023E1E1C135300811739 /* Shader.cpp */,
+				0937023F1E1C135300811739 /* Shader.hpp */,
+				093702401E1C135300811739 /* Texture2D.cpp */,
+				093702411E1C135300811739 /* Texture2D.hpp */,
+				093702421E1C135300811739 /* Window.cpp */,
+				093702431E1C135300811739 /* Window.hpp */,
+				097FAADC1E1C37740026FB60 /* Input.cpp */,
+				097FAADD1E1C37740026FB60 /* Input.hpp */,
+			);
+			name = Engines;
+			sourceTree = "<group>";
+		};
+		0937024D1E1C138600811739 /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				0937024E1E1C139500811739 /* basic.frag */,
+				0937024F1E1C139500811739 /* basic.vs */,
+			);
+			name = Shaders;
+			sourceTree = "<group>";
+		};
+		097FAAD01E1C179D0026FB60 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				097FAAD11E1C17A80026FB60 /* lowpolymountains.obj */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		097FAAD21E1C17CB0026FB60 /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				093702101E1C119E00811739 /* libSOIL.dylib */,
+				0937020C1E1C118500811739 /* libassimp.3.3.1.dylib */,
+				0937020A1E1C117600811739 /* libglfw3.3.2.dylib */,
+				093702081E1C116D00811739 /* libGLEW.2.0.0.dylib */,
+				093702061E1C116200811739 /* OpenGL.framework */,
+			);
+			name = Libs;
+			sourceTree = "<group>";
+		};
+		09FDCD4E1E1C10AA00E3404A = {
+			isa = PBXGroup;
+			children = (
+				097FAAD21E1C17CB0026FB60 /* Libs */,
+				09FDCD591E1C10AA00E3404A /* OGLEngine */,
+				09FDCD581E1C10AA00E3404A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		09FDCD581E1C10AA00E3404A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				09FDCD571E1C10AA00E3404A /* OGLEngine */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		09FDCD591E1C10AA00E3404A /* OGLEngine */ = {
+			isa = PBXGroup;
+			children = (
+				097FAAD01E1C179D0026FB60 /* Models */,
+				0937024D1E1C138600811739 /* Shaders */,
+				0937024C1E1C135E00811739 /* Engines */,
+				09FDCD5A1E1C10AA00E3404A /* main.cpp */,
+			);
+			path = OGLEngine;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		09FDCD561E1C10AA00E3404A /* OGLEngine */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 09FDCD5E1E1C10AA00E3404A /* Build configuration list for PBXNativeTarget "OGLEngine" */;
+			buildPhases = (
+				09FDCD531E1C10AA00E3404A /* Sources */,
+				09FDCD541E1C10AA00E3404A /* Frameworks */,
+				09FDCD551E1C10AA00E3404A /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OGLEngine;
+			productName = OGLEngine;
+			productReference = 09FDCD571E1C10AA00E3404A /* OGLEngine */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		09FDCD4F1E1C10AA00E3404A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "梅宇宸";
+				TargetAttributes = {
+					09FDCD561E1C10AA00E3404A = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 09FDCD521E1C10AA00E3404A /* Build configuration list for PBXProject "OGLEngine" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 09FDCD4E1E1C10AA00E3404A;
+			productRefGroup = 09FDCD581E1C10AA00E3404A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				09FDCD561E1C10AA00E3404A /* OGLEngine */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		09FDCD531E1C10AA00E3404A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				093702481E1C135300811739 /* Renderer.cpp in Sources */,
+				093702451E1C135300811739 /* Mesh.cpp in Sources */,
+				093702471E1C135300811739 /* RawModel.cpp in Sources */,
+				093702441E1C135300811739 /* Loader.cpp in Sources */,
+				097FAADE1E1C37740026FB60 /* Input.cpp in Sources */,
+				0937024B1E1C135300811739 /* Window.cpp in Sources */,
+				093702491E1C135300811739 /* Shader.cpp in Sources */,
+				0937024A1E1C135300811739 /* Texture2D.cpp in Sources */,
+				09FDCD5B1E1C10AA00E3404A /* main.cpp in Sources */,
+				093702461E1C135300811739 /* Model.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		09FDCD5C1E1C10AA00E3404A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		09FDCD5D1E1C10AA00E3404A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		09FDCD5F1E1C10AA00E3404A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					/opt/local/include,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/glew/2.0.0/lib,
+					/usr/local/Cellar/glfw3/3.2.1/lib,
+					/usr/local/Cellar/assimp/3.3.1/lib,
+					/opt/local/lib,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		09FDCD601E1C10AA00E3404A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					/opt/local/include,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/glew/2.0.0/lib,
+					/usr/local/Cellar/glfw3/3.2.1/lib,
+					/usr/local/Cellar/assimp/3.3.1/lib,
+					/opt/local/lib,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		09FDCD521E1C10AA00E3404A /* Build configuration list for PBXProject "OGLEngine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09FDCD5C1E1C10AA00E3404A /* Debug */,
+				09FDCD5D1E1C10AA00E3404A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		09FDCD5E1E1C10AA00E3404A /* Build configuration list for PBXNativeTarget "OGLEngine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09FDCD5F1E1C10AA00E3404A /* Debug */,
+				09FDCD601E1C10AA00E3404A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 09FDCD4F1E1C10AA00E3404A /* Project object */;
+}

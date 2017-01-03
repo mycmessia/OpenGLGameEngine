@@ -1,0 +1,81 @@
+//
+//  Window.cpp
+//  GameEngine
+//
+//  Created by 梅宇宸 on 17/1/2.
+//  Copyright © 2017年 梅宇宸. All rights reserved.
+//
+
+#include "Input.hpp"
+#include "Window.hpp"
+
+Window::Window (int sw, int sh) : screenWidth (sw), screenHeight (sh)
+{
+    glfwInit ();
+    glfwWindowHint (GLFW_CONTEXT_VERSION_MAJOR, 3);
+    glfwWindowHint (GLFW_CONTEXT_VERSION_MINOR, 3);
+    glfwWindowHint (GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+    glfwWindowHint (GLFW_RESIZABLE, GL_FALSE);
+    glfwWindowHint (GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);   // This is vital on MacOSX
+    
+    glWindow = glfwCreateWindow (screenWidth, screenHeight, "Breakout", nullptr, nullptr);
+    glfwMakeContextCurrent (glWindow);
+    
+    glewExperimental = GL_TRUE;
+    glewInit ();
+    glGetError (); // Call it once to catch glewInit() bug, all other errors are now from our application.
+
+    glfwGetFramebufferSize (glWindow, &framebufferWidth, &framebufferHeight);
+    glViewport (0, 0, framebufferWidth, framebufferHeight);
+    
+    glfwSetKeyCallback (glWindow, KeyCallback);
+    
+    glClearColor (0.2, 0.2, 0.2, 1.0);
+}
+
+Window::~Window ()
+{
+    glfwTerminate ();
+}
+
+bool Window::IsClose ()
+{
+    return glfwWindowShouldClose (glWindow);
+}
+
+void Window::PullEvents ()
+{
+    glfwPollEvents ();
+}
+
+void Window::Clear (GLbitfield mask)
+{
+    glClear (mask);
+}
+
+void Window::SwapBuffer ()
+{
+    glfwSwapBuffers (glWindow);
+}
+
+void Window::KeyCallback (GLFWwindow* window, int key, int scancode, int action, int mode)
+{
+    // When a user presses the escape key, we set the WindowShouldClose property to true, closing the application
+    if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
+    {
+        glfwSetWindowShouldClose (window, GL_TRUE);
+    }
+    
+    if (key >= 0 && key < 1024)
+    {
+        if (action == GLFW_PRESS)
+        {
+            Input::keys[key] = GL_TRUE;
+        }
+        else if (action == GLFW_RELEASE)
+        {
+            Input::keys[key] = GL_FALSE;
+            Input::keysProcessed[key] = GL_FALSE;
+        }
+    }
+}
