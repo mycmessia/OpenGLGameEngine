@@ -18,7 +18,7 @@ Mesh::Mesh (vector<Vertex> vertices, vector<GLuint> indices, vector<Texture> tex
     this->setupMesh();
 }
 
-void Mesh::Draw(Shader shader)
+void Mesh::Draw (Shader shader)
 {
     // Bind appropriate textures
     GLuint diffuseNr = 1;
@@ -76,14 +76,20 @@ void Mesh::setupMesh ()
     
     // Set the vertex attribute pointers
     // Vertex Positions
-    glEnableVertexAttribArray(0);
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (GLvoid*)0);
+    glEnableVertexAttribArray (0);
+    glVertexAttribPointer (0, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (GLvoid*)0);
+    
     // Vertex Normals
     glEnableVertexAttribArray(1);
-    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (GLvoid*)offsetof(Vertex, Normal));
+    glVertexAttribPointer (1, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (GLvoid*)offsetof(Vertex, Normal));
+    
     // Vertex Texture Coords
     glEnableVertexAttribArray(2);
-    glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, sizeof(Vertex), (GLvoid*)offsetof(Vertex, TexCoords));
+    glVertexAttribPointer (2, 2, GL_FLOAT, GL_FALSE, sizeof(Vertex), (GLvoid*)offsetof(Vertex, TexCoords));
+    
+    // Vertex Color
+    glEnableVertexAttribArray (3);
+    glVertexAttribPointer (3, 4, GL_FLOAT, GL_FALSE, sizeof(Vertex), (GLvoid*)offsetof(Vertex, Color));
     
     glBindVertexArray(0);
 }

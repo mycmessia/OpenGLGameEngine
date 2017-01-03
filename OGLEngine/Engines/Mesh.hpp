@@ -32,10 +32,15 @@ using namespace std;
 struct Vertex {
     // Position
     glm::vec3 Position;
+    
     // Normal
     glm::vec3 Normal;
+    
     // TexCoords
     glm::vec2 TexCoords;
+    
+    // Colors
+    glm::vec4 Color;
 };
 
 struct Texture {
@@ -48,8 +53,8 @@ class Mesh
 {
 public:
     /*  Mesh Data  */
-    vector<Vertex> vertices;
-    vector<GLuint> indices;
+    vector<Vertex>  vertices;
+    vector<GLuint>  indices;
     vector<Texture> textures;
     
     /*  Functions  */
@@ -57,7 +62,7 @@ public:
     Mesh(vector<Vertex> vertices, vector<GLuint> indices, vector<Texture> textures);
     
     // Render the mesh
-    void Draw(Shader shader);
+    void Draw (Shader shader);
     
     GLuint VAO;
     

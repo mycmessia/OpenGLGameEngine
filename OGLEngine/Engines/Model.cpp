@@ -11,24 +11,24 @@
 GLint TextureFromFile(const char* path, string directory)
 {
     //Generate texture ID and load texture data
-    string filename = string(path);
+    string filename = string (path);
     filename = directory + '/' + filename;
     GLuint textureID;
-    glGenTextures(1, &textureID);
+    glGenTextures (1, &textureID);
     int width,height;
-    unsigned char* image = SOIL_load_image(filename.c_str(), &width, &height, 0, SOIL_LOAD_RGB);
+    unsigned char* image = SOIL_load_image (filename.c_str(), &width, &height, 0, SOIL_LOAD_RGB);
     // Assign texture to ID
-    glBindTexture(GL_TEXTURE_2D, textureID);
-    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, image);
+    glBindTexture (GL_TEXTURE_2D, textureID);
+    glTexImage2D (GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, image);
     glGenerateMipmap(GL_TEXTURE_2D);
     
     // Parameters
-    glTexParameteri( GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT );
-    glTexParameteri( GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT );
-    glTexParameteri( GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR );
-    glTexParameteri( GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-    glBindTexture(GL_TEXTURE_2D, 0);
-    SOIL_free_image_data(image);
+    glTexParameteri (GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
+    glTexParameteri (GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+    glTexParameteri (GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
+    glTexParameteri (GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    glBindTexture (GL_TEXTURE_2D, 0);
+    SOIL_free_image_data (image);
     return textureID;
 }
 
@@ -98,11 +98,18 @@ Mesh Model::processMesh (aiMesh* mesh, const aiScene* scene)
         vector.y = mesh->mVertices[i].y;
         vector.z = mesh->mVertices[i].z;
         vertex.Position = vector;
+        
         // Normals
-        vector.x = mesh->mNormals[i].x;
-        vector.y = mesh->mNormals[i].y;
-        vector.z = mesh->mNormals[i].z;
-        vertex.Normal = vector;
+        if (mesh->mNormals)
+        {
+            vector.x = mesh->mNormals[i].x;
+            vector.y = mesh->mNormals[i].y;
+            vector.z = mesh->mNormals[i].z;
+            vertex.Normal = vector;
+        }
+        else
+            vertex.Normal = glm::vec3 (0.0f, 0.0f, 0.0f);
+        
         // Texture Coordinates
         if(mesh->mTextureCoords[0]) // Does the mesh contain texture coordinates?
         {
@@ -114,7 +121,30 @@ Mesh Model::processMesh (aiMesh* mesh, const aiScene* scene)
             vertex.TexCoords = vec;
         }
         else
-            vertex.TexCoords = glm::vec2(0.0f, 0.0f);
+            vertex.TexCoords = glm::vec2 (0.0f, 0.0f);
+        
+        // Material Colors
+        glm::vec4 color (1.0f, 1.0f, 1.0f, 1.0f);
+        aiMaterial* mtl = scene->mMaterials[mesh->mMaterialIndex];
+        aiColor4D diffuseColor;
+        if (AI_SUCCESS == aiGetMaterialColor (mtl, AI_MATKEY_COLOR_DIFFUSE, &diffuseColor))
+        {
+            color = glm::vec4 (diffuseColor.r, diffuseColor.g, diffuseColor.b, diffuseColor.a);
+        }
+        vertex.Color = color;
+        
+//        if (mesh->mColors[0])
+//        {
+//            glm::vec4 vec;
+//            vec.r = mesh->mColors[0][i].r;
+//            vec.g = mesh->mColors[0][i].g;
+//            vec.b = mesh->mColors[0][i].b;
+//            vec.a = mesh->mColors[0][i].a;
+//            vertex.Color = vec;
+//        }
+//        else
+//            vertex.Color = glm::vec4 (1.0f);
+        
         vertices.push_back(vertex);
     }
     // Now wak through each of the mesh's faces (a face is a mesh its triangle) and retrieve the corresponding vertex indices.

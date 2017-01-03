@@ -61,7 +61,6 @@
 		093702431E1C135300811739 /* Window.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Window.hpp; path = Engines/Window.hpp; sourceTree = "<group>"; };
 		0937024E1E1C139500811739 /* basic.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = basic.frag; path = Shaders/basic.frag; sourceTree = "<group>"; };
 		0937024F1E1C139500811739 /* basic.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = basic.vs; path = Shaders/basic.vs; sourceTree = "<group>"; };
-		097FAAD11E1C17A80026FB60 /* lowpolymountains.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = lowpolymountains.obj; path = Models/lowpolymountains.obj; sourceTree = "<group>"; };
 		097FAADC1E1C37740026FB60 /* Input.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Input.cpp; path = Engines/Input.cpp; sourceTree = "<group>"; };
 		097FAADD1E1C37740026FB60 /* Input.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Input.hpp; path = Engines/Input.hpp; sourceTree = "<group>"; };
 		097FAADF1E1C46B00026FB60 /* Camera.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Camera.cpp; path = Engines/Camera.cpp; sourceTree = "<group>"; };
@@ -125,7 +124,6 @@
 		097FAAD01E1C179D0026FB60 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				097FAAD11E1C17A80026FB60 /* lowpolymountains.obj */,
 			);
 			name = Models;
 			sourceTree = "<group>";

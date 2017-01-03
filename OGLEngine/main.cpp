@@ -20,18 +20,20 @@ int main (int argc, const char * argv[])
 {
     Window window (800, 600);
     // Camera
-    Camera camera(glm::vec3 (0.0f, 10.0f, 3.0f));
+    Camera camera (glm::vec3 (0.0f, 5.0f, 10.0f));
     
     Loader::LoadShader (SHADER_FULL_DIR"model.vs", SHADER_FULL_DIR"model.frag", nullptr, "model");
     
     // Load nanosuit using our model loader
-    Model mountain (MODEL_FULL_DIR"lowpolymountains.obj");
+    Model mountain (MODEL_FULL_DIR"desert.obj");
+    
+    glEnable (GL_DEPTH_TEST);
     
     while (!window.IsClose ())
     {
         window.CalcDeltaTime ();
         
-        window.Clear (GL_COLOR_BUFFER_BIT);
+        window.Clear (GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
         
         window.PullEvents ();
         
