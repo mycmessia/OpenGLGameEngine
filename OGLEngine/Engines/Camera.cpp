@@ -113,4 +113,8 @@ void Camera::HandleInput (float deltaTime)
     {
         ProcessKeyboard (RIGHT, deltaTime);
     }
+    
+    ProcessMouseMovement (Input::mouseMoveOffsetX, Input::mouseMoveOffsetY);
+    
+    ProcessMouseScroll (Input::mouseScrollOffsetY);
 }

@@ -125,11 +125,14 @@ Mesh Model::processMesh (aiMesh* mesh, const aiScene* scene)
         
         // Material Colors
         glm::vec4 color (1.0f, 1.0f, 1.0f, 1.0f);
-        aiMaterial* mtl = scene->mMaterials[mesh->mMaterialIndex];
-        aiColor4D diffuseColor;
-        if (AI_SUCCESS == aiGetMaterialColor (mtl, AI_MATKEY_COLOR_DIFFUSE, &diffuseColor))
+        if (mesh->mMaterialIndex)
         {
-            color = glm::vec4 (diffuseColor.r, diffuseColor.g, diffuseColor.b, diffuseColor.a);
+            aiMaterial* mtl = scene->mMaterials[mesh->mMaterialIndex];
+            aiColor4D diffuseColor;
+            if (AI_SUCCESS == aiGetMaterialColor (mtl, AI_MATKEY_COLOR_DIFFUSE, &diffuseColor))
+            {
+                color = glm::vec4 (diffuseColor.r, diffuseColor.g, diffuseColor.b, diffuseColor.a);
+            }
         }
         vertex.Color = color;
         

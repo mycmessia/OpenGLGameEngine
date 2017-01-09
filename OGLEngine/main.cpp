@@ -25,7 +25,7 @@ int main (int argc, const char * argv[])
     Loader::LoadShader (SHADER_FULL_DIR"model.vs", SHADER_FULL_DIR"model.frag", nullptr, "model");
     
     // Load nanosuit using our model loader
-    Model mountain (MODEL_FULL_DIR"desert.obj");
+    Model mountain (MODEL_FULL_DIR"nanosuit/nanosuit.obj");
     
     glEnable (GL_DEPTH_TEST);
     
@@ -34,6 +34,8 @@ int main (int argc, const char * argv[])
         window.CalcDeltaTime ();
         
         window.Clear (GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+        
+        Input::SetDefalutInputs ();
         
         window.PullEvents ();
         

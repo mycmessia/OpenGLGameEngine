@@ -29,6 +29,8 @@ Window::Window (int sw, int sh) : screenWidth (sw), screenHeight (sh)
     glViewport (0, 0, framebufferWidth, framebufferHeight);
     
     glfwSetKeyCallback (glWindow, KeyCallback);
+    glfwSetCursorPosCallback (glWindow, MouseCallback);
+    glfwSetScrollCallback (glWindow, ScrollCallback);
     
     glClearColor (0.2, 0.2, 0.2, 1.0);
 }
@@ -78,6 +80,27 @@ void Window::KeyCallback (GLFWwindow* window, int key, int scancode, int action,
             Input::keysProcessed[key] = GL_FALSE;
         }
     }
+}
+
+void Window::MouseCallback (GLFWwindow* window, double xpos, double ypos)
+{
+    if (Input::isFirstMove)
+    {
+        Input::lastMouseX = xpos;
+        Input::lastMouseY = ypos;
+        Input::isFirstMove = false;
+    }
+    
+    Input::mouseMoveOffsetX = xpos - Input::lastMouseX;
+    Input::mouseMoveOffsetY = Input::lastMouseY - ypos;
+    
+    Input::lastMouseX = xpos;
+    Input::lastMouseY = ypos;
+}
+
+void Window::ScrollCallback (GLFWwindow* window, double xoffset, double yoffset)
+{
+    Input::mouseScrollOffsetY = yoffset;
 }
 
 void Window::CalcDeltaTime ()

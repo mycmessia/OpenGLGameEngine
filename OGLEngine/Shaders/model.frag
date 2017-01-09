@@ -9,5 +9,5 @@ out vec4 color;
 
 void main ()
 {
-    color = vertexColor;
+    color = texture (texture1, TexCoord);
 }
